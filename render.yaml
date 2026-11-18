@@ -1,0 +1,11 @@
+# Render Blueprint for jktrn/astro-erudite
+# This is a STATIC Astro site: no server process, no PORT, no health check.
+services:
+  - type: web
+    name: astro-erudite
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: NODE_VERSION
+        value: 24.22.1
